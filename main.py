@@ -1,5 +1,6 @@
 from typing import List
 
+# bubble sort
 def bubble_sort(numbers: List[int]) -> List[int]:
     len_numbers = len(numbers)
     for i in range(len_numbers):
@@ -25,5 +26,18 @@ def bubble_sort(numbers: List[int]) -> List[int]:
 #
 #     return numbers
 
+# selection sort
+def selection_sort(numbers: List[int]) -> List[int]:
+    for j in range(len(numbers)-1):
+        tmp = j
+        for i in range(j+1,len(numbers)):
+            if numbers[tmp] > numbers[i]:
+                tmp = i
+
+        numbers[tmp],numbers[j] = numbers[j],numbers[tmp]
+
+    return  numbers
+
 if __name__ == '__main__':
-    print(bubble_sort([2,5,1,8,7,3]))
+    # print(bubble_sort([2,5,1,8,7,3]))
+    print(selection_sort([2,5,1,8,7,3]))
