@@ -51,7 +51,43 @@ def insertion_sort(numbers: List[int]) -> List[int]:
 
     return numbers
 
+def merge_sort(numbers: List[int]) -> List[int]:
+    if len(numbers) <= 1:
+        return numbers
+
+    center = len(numbers) // 2
+    left =  numbers[:center]
+    right =  numbers[center:]
+
+    merge_sort(left)
+    merge_sort(right)
+
+    i=j=k=0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            numbers[k] = left[i]
+            i+=1
+        else:
+            numbers[k] = right[j]
+            j+=1
+        k+=1
+
+    while i < len(left):
+        numbers[k] = left[i]
+        k+=1
+        i+=1
+
+    while j < len(right):
+        numbers[k] = right[j]
+        k+=1
+        j+=1
+
+    return numbers
+
+
+
 if __name__ == '__main__':
     # print(bubble_sort([2,5,1,8,7,3]))
     # print(selection_sort([2,5,1,8,7,3]))
-    print(insertion_sort([2,5,1,8,7,3]))
+    # print(insertion_sort([2,5,1,8,7,3]))
+    print(merge_sort([5,4,1,8,7,3,2,9]))
