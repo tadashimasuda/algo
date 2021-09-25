@@ -12,3 +12,13 @@ input = int(input())
 h, mod = divmod(input, 3600)
 m,s = divmod(mod, 60)
 print(f"{h}:{m}:{s}")
+
+#ITP1_2_A
+input = input()
+a,b = [int(num) for num in input.split(' ')]
+if a<b:
+    print('a < b')
+elif a>b:
+    print('a > b')
+elif a == b:
+    print('a == b')
