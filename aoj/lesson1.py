@@ -31,7 +31,23 @@ if a < b  and b < c:
 else:
     print('No')
 
+# ITP1_2_C
 input = input()
 list = [int(num) for num in input.split(' ')]
 list.sort()
 print(f"{list[0]} {list[1]} {list[2]}")
+
+#ITP1_2_D
+# input = input()
+input = '5 4 2 4 1'
+W,H,x,y,r = [int(num) for num in input.split(' ')]
+
+
+way = (x + r <= W,y + r <= H,x - r >= 0,y - r >= 0,y - r >= 0)
+if W >= x and H >= y:
+    if(all(way)):
+        print('Yes')
+    else:
+        print('No')
+else:
+    print('No')
