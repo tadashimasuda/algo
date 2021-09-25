@@ -30,3 +30,8 @@ if a < b  and b < c:
     print('Yes')
 else:
     print('No')
+
+input = input()
+list = [int(num) for num in input.split(' ')]
+list.sort()
+print(f"{list[0]} {list[1]} {list[2]}")
