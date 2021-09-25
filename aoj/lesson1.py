@@ -22,3 +22,11 @@ elif a>b:
     print('a > b')
 elif a == b:
     print('a == b')
+
+# ITP1_2_B
+input = input()
+a,b,c = [int(num) for num in input.split(' ')]
+if a < b  and b < c:
+    print('Yes')
+else:
+    print('No')
