@@ -121,3 +121,9 @@
 #
 #         print("".join([str(_) for _ in list]))
 #     print()
+
+# ITP1_6_A
+n = int(input())
+lst = list(map(int, input().split()))
+lst.reverse()
+print(*lst)
