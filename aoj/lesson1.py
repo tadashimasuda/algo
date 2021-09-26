@@ -67,11 +67,23 @@
 #         print(y, x)
 
 #ITP1_3_D
-input = input()
-a,b,c = [int(num) for num in input.split(' ')]
+# input = input()
+# a,b,c = [int(num) for num in input.split(' ')]
+#
+# count = 0
+# for i in range(a,b+1):
+#     if c % i ==0:
+#         count+=1
+# print(count)
 
-count = 0
-for i in range(a,b+1):
-    if c % i ==0:
-        count+=1
-print(count)
+# ITP1_4_A
+# input = input()
+# a,b = [int(num) for num in input.split(' ')]
+#
+# print("{0} {1} {2:.8f}".format(a//b,a%b,a/b))
+
+#ITP1_4_B
+import math
+
+r = float(input()) #ここ大事
+print('{0:.6f} {1:.6f}'.format(r*r*math.pi, 2*r*math.pi))
