@@ -98,3 +98,26 @@
 #     for h in range(H):
 #         print("#" * W)
 #     print()
+
+#ITP1_5_C
+# while True:
+#     H,W = [int(num) for num in input().split(' ')]
+#
+#     if H == 0 and W == 0:
+#         break
+#
+#     flag = True
+#     for h in range(H):
+#         list = []
+#         if(h==0 or h%2==0): flag=True
+#         else: flag=False
+#         for w in range(W):
+#             if not flag:
+#                 list.append('.')
+#                 flag=True
+#             else:
+#                 list.append('#')
+#                 flag=False
+#
+#         print("".join([str(_) for _ in list]))
+#     print()
