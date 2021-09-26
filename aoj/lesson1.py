@@ -83,7 +83,18 @@
 # print("{0} {1} {2:.8f}".format(a//b,a%b,a/b))
 
 #ITP1_4_B
-import math
+# import math
+#
+# r = float(input()) #ここ大事
+# print('{0:.6f} {1:.6f}'.format(r*r*math.pi, 2*r*math.pi))
 
-r = float(input()) #ここ大事
-print('{0:.6f} {1:.6f}'.format(r*r*math.pi, 2*r*math.pi))
+#ITP1_5_A
+# while True:
+#     H,W = [int(num) for num in input().split(' ')]
+#
+#     if H==0 and W==0:
+#         break
+#
+#     for h in range(H):
+#         print("#" * W)
+#     print()
