@@ -123,7 +123,24 @@
 #     print()
 
 # ITP1_6_A
+# n = int(input())
+# lst = list(map(int, input().split()))
+# lst.reverse()
+# print(*lst)
+
+#ITP1_6_C
 n = int(input())
-lst = list(map(int, input().split()))
-lst.reverse()
-print(*lst)
+b = list(map(int, input().split()))
+f = list(map(int, input().split()))
+r = list(map(int, input().split()))
+v = list(map(int, input().split()))
+
+houses = [[[0 for r in range(10)] for f in range(3)] for b in range(4)]
+houses[b - 1][f - 1][r - 1]+=v
+
+for b in range(4):
+    for f in  houses[b]:
+        print('', *f)
+    if b != 3:
+        print('#' * 20)
+
