@@ -5,7 +5,7 @@ def is_prime(number:int)->bool:
     if number<2 and number % 2 == 0:
         return False
 
-    i=3a
+    i=3
     while i <= math.sqrt(number):
         if number % i == 0:
             return False
