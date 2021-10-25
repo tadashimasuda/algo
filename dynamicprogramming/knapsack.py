@@ -15,3 +15,4 @@ for i in range(N):
         else:
             dp[i + 1][j] = max(dp[i][j],dp[i][j-w[i]] + v[i])
 
+print(dp[-1][-1])
