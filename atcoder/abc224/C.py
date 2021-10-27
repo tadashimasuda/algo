@@ -8,31 +8,25 @@ while input_count<N:
     input_count+=1
 
 count = 0
-for i in range(len(points)):
-    for j in range(i+1,len(points)):
-        x1 = points[i][0]
-        x2 = points[j][0]
+for i1 in range(N):
+    for i2 in range(i1):
+        if i1==i2:
+            continue
+        for i3 in range(i2):
+            if i2==i3 or i1==i3:
+                continue
 
-        y1 = points[i][1]
-        y2 = points[j][1]
+            x1 = points[i1][0]
+            y1 = points[i1][1]
 
-        print(y1,y2,x1,x2,':',i,j)
+            x2 = points[i2][0]
+            y2 = points[i2][1]
 
-        try:
-            print(abs(y1-y2)/abs(x1-x2))
-        except ZeroDivisionError:
-            print(0)
-        # tilt1 = y1/x1
-        # tilt2 = y2/x2
-        
-        # if(tilt1 == tilt2):
-        #     for z in range(j,len(points)): 
-        #         x3 = points[z][0]
-        #         y3 = points[z][1]
+            x3 = points[i3][0]
+            y3 = points[i3][1]
 
-        #         if(not tilt1 == y3/x3):
-        #             count+=1
-        # else:
-        #     count+=1
+            if ((y2-y1)*(x3-x1) != (x2-x1)*(y3-y1)):
+               count+=1
+
 
 print(count)
