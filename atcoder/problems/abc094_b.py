@@ -1,12 +1,13 @@
 N,M,X = map(int,input().split(' '))
 A = list(map(int,input().split(' ')))
 
-A.append(M)
-A.sort()
-id = A.index(M)
+cnt_front = 0
+cnt_back = 0
+for i in range(1,N):
+    if i in A:
+        if i < X:
+            cnt_front+=1
+        else:
+            cnt_back+=1
 
-left = len(A[:id-1])-1
-right = len(A[id+1:])-1
-
-print(left,right)
-print(A[:id],A[id:])
+print(min(cnt_front,cnt_back))
