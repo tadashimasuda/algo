@@ -5,6 +5,8 @@ def is_number(num):
     return num in lis
 
 while True:
+    lis.append(n)
+
     if n%2 == 0:
         n = n//2
     else:
@@ -12,8 +14,5 @@ while True:
     
     if is_number(n):
         lis.append(n)
-        print(len(lis)+1)
+        print(len(lis))
         break
-
-    lis.append(n)
-
