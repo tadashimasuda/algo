@@ -1,7 +1,7 @@
 n = int(input())
 
 lis = []
-def is_number(num):
+def is_number(num:int)->bool:
     return num in lis
 
 while True:
