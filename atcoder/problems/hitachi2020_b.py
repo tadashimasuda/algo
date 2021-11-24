@@ -1,0 +1,1 @@
+A,B,M = map(int,input().split(' '))
